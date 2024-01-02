@@ -15,8 +15,10 @@ const HorizontalScroll = ({ children, targetRef, refType }) => {
     useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
 
+    const refToCleanup = sectionRef.current;
+
     return () => {
-        gsap.killTweensOf(sectionRef.current);
+        gsap.killTweensOf(refToCleanup);
     }
     }, [])
 
@@ -55,7 +57,7 @@ const HorizontalScroll = ({ children, targetRef, refType }) => {
         return () => {
             pin.kill();
         }
-    }, [targetRef, isMobile, isTablet, isDesktop, opulenceScroll, luxuryScroll])
+    }, [targetRef, refType, isMobile, isTablet, isDesktop, opulenceScroll, luxuryScroll])
 
   return (
     <div ref={targetRef} className={`relative w-full`} style={{ height: Children.count(children) * 600 + "px", paddingTop: 10 + "px" }} >

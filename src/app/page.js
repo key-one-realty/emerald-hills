@@ -1,3 +1,4 @@
+// eslint-disable react/no-unescaped-entities
 "use client";
 import VideoComponent from "@/component/VideoComponent";
 import Image from "next/image";
@@ -46,7 +47,7 @@ export default function Home() {
 
   useEffect(() => {
     handleModalScroll();
-  }, [showVideo]);
+  }, [showVideo, handleModalScroll]);
 
   useEffect(() => {
     const lenis = new Lenis();
