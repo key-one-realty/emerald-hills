@@ -2,19 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -24,4 +25,175 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.legend{
+  background-image: url('/legend_bg.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.70) 0.21%, rgba(217, 217, 217, 0.00) 30.23%) url('/legend_bg.png'); */
+  width: 100vw;
+}
+
+.radial-gradient{
+  position: absolute;
+  top: 10px;
+  right: -90px;
+  width: 480px;
+  height: 480px;
+  opacity: 0.14;
+  background-image: radial-gradient(50% 50% at 50% 50%, #2067BF  0%, rgba(255, 255, 255, 0.00) 100%);
+}
+.radial-gradient-2{
+  position: absolute;
+  bottom: 10px;
+  left: -90px;
+  width: 480px;
+  height: 480px;
+  opacity: 0.14;
+  background-image: radial-gradient(50% 50% at 50% 50%, #2067BF  0%, rgba(255, 255, 255, 0.00) 100%);
+}
+.radial-gradient-opulence{
+  position: absolute;
+  top: -80px;
+  right: -90px;
+  width: 400px;
+  height: 400px;
+  opacity: 0.14;
+  background-image: radial-gradient(50% 50% at 50% 50%, #2067BF  0%, rgba(255, 255, 255, 0.00) 100%);
+}
+.radial-gradient-opulence-2{
+  position: absolute;
+  bottom: -80px;
+  left: -90px;
+  width: 300px;
+  height: 300px;
+  opacity: 0.14;
+  background-image: radial-gradient(50% 50% at 50% 50%, #2067BF  0%, rgba(255, 255, 255, 0.00) 100%);
+}
+
+.modal-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.modal{
+  position: relative;
+  width: 100vw;
+  max-width: 640px;
+  height: auto;
+  max-height: 400px;
+  /* background-color: white; */
+  border-radius: 10px;
+  padding: 20px;
+}
+.mobile_nav{
+  padding: 1rem 2rem;
+}
+
+.mobile-nav-dropdown{
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  background-color: #38bdf8;
+}
+.mobile-nav-dropdown li{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.mobile-nav-dropdown li a{
+  border-bottom: 1px solid #E5E5E5;
+  text-align: center;
+  padding: 0.2rem 0;
+  /* width: 100%; */
+  transition: all 0.3s ease-in-out;
+}
+
+.mobile-nav-dropdown li a:hover{
+  background-color: #E5E5E5;
+  color: #38bdf8;
+  width: 100px;
+  border-bottom: 1px solid #38bdf8;
+}
+
+.reveal{
+  animation: reveal 0.5s ease-in-out forwards;
+}
+
+@keyframes reveal {
+  0%{
+    opacity: 0;
+    transform: translateY(-600px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hide{
+  animation: hide 0.5s ease-in-out forwards;
+}
+
+@keyframes hide {
+  0%{
+    opacity: 1;
+    transform: translateY(-400px);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(-600px);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .legend{
+    background-image: url('/legend_bg_mobile.png');
+    background-position: center center;
+  }
+
+ .community-contents-3{
+    top: -4rem;
+    right: 31%;
+  }
+
+  .radial-gradient, .radial-gradient-2, .radial-gradient-opulence, .radial-gradient-opulence-2{
+    width: 300px;
+    height: 300px;
+    display: none;
+  }
+
+  .stats-container{
+    grid-template-rows: repeat(3, 10rem);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .image-1, .image-2{
+    width: 60vw;
+    height: 40vh;
+  }
+
+  .community-contents-3{
+    top: -4rem;
+    right: 40%;
+  }
 }
