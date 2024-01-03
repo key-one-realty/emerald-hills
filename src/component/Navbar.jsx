@@ -1,9 +1,14 @@
 import Image from 'next/image';
 import React from 'react'
 
-const Navbar = () => {
+const Navbar = ({ communitySection, exteriorSection, interiorSection, contactSection }) => {
 
     const [showMobileNav, setShowMobileNav] = React.useState(false);
+
+    const handleScrollToSection = (section) => {
+        section.scrollIntoView({ behavior: 'smooth' });
+        setShowMobileNav(false);
+    }
 
   return (
 <>
@@ -16,16 +21,16 @@ const Navbar = () => {
             <div className="nav-links w-[50vw] flex justify-center items-center" style={{width: 50 + 'vw'}}>
               <ul className="flex w-full justify-evenly items-center space-x-4 text-slate-800 text-lg font-normal font-poppins">
                 <li className="text-white text-lg font-normal leading-relaxed font-poppins">
-                  <a href="#">About</a>
+                  <p onClick={() => handleScrollToSection(communitySection.current)}>Community</p>
                 </li>
                 <li className="text-white text-lg font-normal leading-relaxed font-poppins">
-                  <a href="#">Services</a>
+                  <p onClick={() => handleScrollToSection(exteriorSection.current)}>Exterior</p>
                 </li>
                 <li className="text-white text-lg font-normal leading-relaxed font-poppins">
-                  <a href="#">Blog</a>
+                  <p onClick={() => handleScrollToSection(interiorSection.current)}>Interior</p>
                 </li>
                 <li className="text-white text-lg font-normal leading-relaxed font-poppins">
-                  <a href="#">Contact</a>
+                  <p onClick={() => handleScrollToSection(contactSection.current)}>Contact</p>
                 </li>
               </ul>
             </div>
@@ -50,16 +55,16 @@ const Navbar = () => {
                 <div className={`${ showMobileNav ? 'reveal' : 'hide'} nav-links w-full flex flex-col justify-center items-center`}>
                     <ul className='mobile-nav-dropdown flex flex-col w-full justify-center items-center text-slate-800 text-lg font-normal font-poppins'>
                         <li className='text-white text-lg font-normal font-poppins'>
-                            <a href='#'>About</a>
+                            <p onClick={() => handleScrollToSection(communitySection.current)}>Community</p>
                         </li>
                         <li className='text-white text-lg font-normal font-poppins'>
-                            <a href='#'>Services</a>
+                            <p onClick={() => handleScrollToSection(exteriorSection.current)}>Exterior</p>
                         </li>
                         <li className='text-white text-lg font-normal font-poppins'>
-                            <a href='#'>Blog</a>
+                            <p onClick={() => handleScrollToSection(interiorSection.current)}>Interior</p>
                         </li>
                         <li className='text-white text-lg font-normal font-poppins'>
-                            <a href='#'>Contact</a>
+                            <p onClick={() => handleScrollToSection(contactSection.current)}>Contact</p>
                         </li>
                     </ul>
                 </div>

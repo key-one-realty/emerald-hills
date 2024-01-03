@@ -16,6 +16,8 @@ export default function Home() {
   const luxuryBannerContainer = useRef(null);
   const targetRef1 = useRef(null);
   const targetRef2 = useRef(null);
+  const communitySection = useRef(null);
+  const contactSection = useRef(null);
 
   const handlePlayBtn = () => {
     if (!showVideo) {
@@ -68,7 +70,12 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between">
       <section>
         <div className="legend bg-gradient-to-b from-slate-800 to-slate-800 h-[100svh] w-full flex flex-col justify-start items-center">
-          <Navbar />
+          <Navbar
+            communitySection={communitySection}
+            exteriorSection={targetRef1}
+            interiorSection={targetRef2}
+            contactSection={contactSection}
+          />
           <div className="legend-contents w-10/12 xl:w-9/12 h-[65%]">
             <div className="flex flex-col justify-center items-start h-full">
               <h1 className="text-white text-3xl lg:text-[64px] lg:leading-[72px] w-[70.556vw] 2xl:w-[54.146vw]">
@@ -132,7 +139,11 @@ export default function Home() {
         <div className="radial-gradient"></div>
         <div className="radial-gradient-2"></div>
       </section>
-      <section className="community flex justify-center items-center bg-sky-100 h-fit lg:h-[53.776vh]">
+      <section
+        ref={communitySection}
+        id="community"
+        className="community flex justify-center items-center bg-sky-100 h-fit lg:h-[53.776vh]"
+      >
         <div className="community-contents py-10 lg:py-0 w-10/12 xl:w-9/12 flex flex-col lg:flex-row gap-24 justify-center items-center relative">
           <div className="community-contents-1 flex flex-col gap-4 items-center justify-center">
             <h1 className="text-3xl lg:text-[3.333vw] text-slate-800 font-bold lg:leading-[3.889vw]">
@@ -176,6 +187,7 @@ export default function Home() {
       </section>
       <section
         ref={targetRef1}
+        id="exterior"
         className="w-full overflow-x-hidden scrollbar-hide relative flex flex-col items-center justify-center pt-[3%] pb-[2%] 2xl:py-[10%]"
       >
         <div className="banners py-[20%] lg:py-0 w-[100vw] flex flex-col justify-center items-center">
@@ -312,6 +324,7 @@ export default function Home() {
         <div
           className="opulence w-10/12 xl:w-9/12 py-[15%] lg:py-[7%] 2xl:py-[10%]"
           ref={targetRef2}
+          id="interior"
         >
           <div className="opulence-header flex flex-col items-center justify-center gap-16">
             <h1 className=" text-center text-slate-800 text-3xl lg:text-5xl font-bold lg:leading-[56px]">
@@ -485,7 +498,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="contact flex justify-center items-center">
+      <section
+        ref={contactSection}
+        id="contact"
+        className="contact flex justify-center items-center"
+      >
         <div className="contact-container w-10/12 xl:w-9/12 flex flex-col-reverse lg:flex-row items-center justify-center gap-6 bg-sky-400 rounded-[15px] lg:h-[51.085vh] xl:h-[52.085vh] 2xl:h-[49.085vh]">
           <div className="contact-content w-full flex flex-col items-center px-8 lg:px-0 pb-6 lg:pb-0 lg:items-start justify-center gap-6 lg:pl-16">
             <h1 className="text-white text-3xl lg:text-5xl font-bold lg:leading-[56px]">
