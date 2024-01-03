@@ -87,7 +87,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full overflow-x-hidden relative flex flex-col items-center justify-center py-40">
+      <section className="w-full overflow-x-hidden scrollbar-hide relative flex flex-col items-center justify-center py-40">
         <MobileHorizontalScroll />
         <div
           className="lg:flex banner w-10/12 xl:w-9/12 hidden flex-col lg:flex-row gap-10 lg:gap-24 justify-between items-center"
@@ -176,9 +176,9 @@ export default function Home() {
       </section>
       <section
         ref={targetRef1}
-        className="w-full overflow-x-hidden relative flex flex-col items-center justify-center py-[5%] 2xl:py-[15%]"
+        className="w-full overflow-x-hidden scrollbar-hide relative flex flex-col items-center justify-center pt-[3%] pb-[2%] 2xl:py-[10%]"
       >
-        <div className="banners py-[35%] lg:py-0 w-[100vw] flex flex-col justify-center items-center">
+        <div className="banners py-[20%] lg:py-0 w-[100vw] flex flex-col justify-center items-center">
           <div className="banner-header w-full flex flex-col items-center justify-center gap-10">
             <h1 className="text-center text-slate-800 text-3xl lg:text-5xl font-bold lg:leading-[56px] lg:w-[60.139vw]">
               The Pièce de Résistance: Ultra Luxury Mansion
@@ -194,13 +194,13 @@ export default function Home() {
           </div>
           <div className="banner-contents w-full flex flex-col items-center justify-center gap-10">
             <div
-              className="banner-contents-1 w-full pl-3 pb-14 flex items-center justify-center gap-7 overflow-x-hidden"
+              className="banner-contents-1 w-full pl-3 pb-14 flex items-center justify-center gap-7 overflow-x-hidden scrollbar-hide"
               ref={bannerContainer}
             >
               <HorizontalScroll targetRef={targetRef1}>
                 <div className="banner-contents-1-1 relative w-[353px] h-[253px] lg:w-[42.361vw] lg:h-[45.767vh]">
                   <Image
-                    src="/banner_1.png"
+                    src="/exterior_1.jpg"
                     alt="banner-1"
                     fill="responsive"
                     className="object-cover rounded-[10px]"
@@ -208,7 +208,7 @@ export default function Home() {
                 </div>
                 <div className="banner-contents-1-2 relative w-[353px] h-[253px] lg:w-[42.361vw] lg:h-[45.767vh]">
                   <Image
-                    src="/banner_2.png"
+                    src="/exterior_2.jpg"
                     alt="banner-2"
                     fill="responsive"
                     className="object-cover rounded-[10px]"
@@ -216,7 +216,7 @@ export default function Home() {
                 </div>
                 <div className="banner-contents-2-1 relative w-[353px] h-[253px] lg:w-[42.361vw] lg:h-[45.767vh]">
                   <Image
-                    src="/banner_3.png"
+                    src="/exterior_3.jpg"
                     alt="banner-3"
                     fill="responsive"
                     className="object-cover rounded-[10px]"
@@ -224,7 +224,15 @@ export default function Home() {
                 </div>
                 <div className="banner-contents-2-2 relative w-[353px] h-[253px] lg:w-[42.361vw] lg:h-[45.767vh]">
                   <Image
-                    src="/banner_2.png"
+                    src="/exterior_4.jpg"
+                    alt="banner-2-1"
+                    fill="responsive"
+                    className="object-cover rounded-[10px]"
+                  />
+                </div>
+                <div className="banner-contents-2-2 relative w-[353px] h-[253px] lg:w-[42.361vw] lg:h-[45.767vh]">
+                  <Image
+                    src="/exterior_5.jpg"
                     alt="banner-2-1"
                     fill="responsive"
                     className="object-cover rounded-[10px]"
@@ -300,9 +308,9 @@ export default function Home() {
           </button>
         </div>
       </section>
-      <section className="w-full overflow-x-hidden overflow-y-hidden relative flex flex-col items-center justify-center py-20 pb-48 bg-sky-100">
+      <section className="w-full overflow-x-hidden scrollbar-hide overflow-y-hidden relative flex flex-col items-center justify-center py-20 pb-48 bg-sky-100">
         <div
-          className="opulence w-10/12 xl:w-9/12 py-[15%] lg:py-[5%] 2xl:py-[15%]"
+          className="opulence w-10/12 xl:w-9/12 py-[15%] lg:py-[7%] 2xl:py-[10%]"
           ref={targetRef2}
         >
           <div className="opulence-header flex flex-col items-center justify-center gap-16">
@@ -320,64 +328,79 @@ export default function Home() {
           <div className="opulence-designs-container flex justify-center items-center gap-5 pb-8">
             <HorizontalScroll targetRef={targetRef2} refType={"opulence"}>
               <div className="opulence-design rounded-[10px]">
-                <div className="image relative w-[351px] h-[237px] lg:w-[27.778vw] lg:h-[29.748vh]">
+                <div className="image relative w-[351px] lg:w-[27.778vw] h-[40.389vh]">
                   <Image
-                    src="/opulence_design_1.png"
+                    src="/interior_1.jpg"
                     alt="opulence-design-1"
                     fill="responsive"
                     className="object-cover"
                   />
                 </div>
-                <div className="content w-[351px] lg:w-[27.778vw] bg-white py-6 lg:py-9 px-7">
+                {/* <div className="content w-[351px] lg:w-[27.778vw] bg-white py-6 lg:py-9 px-7">
                   <h1 className="text-slate-800 text-2xl font-bold leading-loose">
                     Fully Automated Glass Walls
                   </h1>
-                </div>
+                </div> */}
               </div>
               <div className="opulence-design rounded-[10px]">
-                <div className="image relative w-[351px] h-[237px] lg:w-[27.778vw] lg:h-[29.748vh]">
+                <div className="image relative w-[351px] lg:w-[27.778vw] h-[40.389vh]">
                   <Image
-                    src="/opulence_design_1.png"
+                    src="/interior_2.jpg"
                     alt="opulence-design-2"
                     fill="responsive"
                     className="object-cover"
                   />
                 </div>
-                <div className="content w-[351px] lg:w-[27.778vw] bg-white py-6 lg:py-9 px-7">
+                {/* <div className="content w-[351px] lg:w-[27.778vw] bg-white py-6 lg:py-9 px-7">
                   <h1 className="text-slate-800 text-2xl font-bold leading-loose">
                     Fully Automated Glass Walls
                   </h1>
-                </div>
+                </div> */}
               </div>
               <div className="opulence-design rounded-[10px]">
-                <div className="image relative w-[351px] h-[237px] lg:w-[27.778vw] lg:h-[29.748vh]">
+                <div className="image relative w-[351px] lg:w-[27.778vw] h-[40.389vh]">
                   <Image
-                    src="/opulence_design_1.png"
+                    src="/interior_3.jpg"
                     alt="opulence-design-3"
                     fill="responsive"
                     className="object-cover"
                   />
                 </div>
-                <div className="content w-[351px] lg:w-[27.778vw] bg-white py-6 lg:py-9 px-7">
+                {/* <div className="content w-[351px] lg:w-[27.778vw] bg-white py-6 lg:py-9 px-7">
                   <h1 className="text-slate-800 text-2xl font-bold leading-loose">
                     Fully Automated Glass Walls
                   </h1>
-                </div>
+                </div> */}
               </div>
               <div className="opulence-design rounded-[10px]">
-                <div className="image relative w-[351px] h-[237px] lg:w-[27.778vw] lg:h-[29.748vh]">
+                <div className="image relative w-[351px] lg:w-[27.778vw] h-[40.389vh]">
                   <Image
-                    src="/opulence_design_1.png"
+                    src="/interior_4.jpg"
                     alt="opulence-design-4"
                     fill="responsive"
                     className="object-cover"
                   />
                 </div>
-                <div className="content w-[351px] lg:w-[27.778vw] bg-white py-6 lg:py-9 px-7">
+                {/* <div className="content w-[351px] lg:w-[27.778vw] bg-white py-6 lg:py-9 px-7">
                   <h1 className="text-slate-800 text-2xl font-bold leading-loose">
                     Fully Automated Glass Walls
                   </h1>
+                </div> */}
+              </div>
+              <div className="opulence-design rounded-[10px]">
+                <div className="image relative w-[351px] lg:w-[27.778vw] h-[40.389vh]">
+                  <Image
+                    src="/interior_5.jpg"
+                    alt="opulence-design-4"
+                    fill="responsive"
+                    className="object-cover"
+                  />
                 </div>
+                {/* <div className="content w-[351px] lg:w-[27.778vw] bg-white py-6 lg:py-9 px-7">
+                  <h1 className="text-slate-800 text-2xl font-bold leading-loose">
+                    Fully Automated Glass Walls
+                  </h1>
+                </div> */}
               </div>
             </HorizontalScroll>
           </div>
@@ -492,7 +515,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="sign-up overflow-x-hidden flex relative justify-center items-center py-40 w-full">
+      <section className="sign-up overflow-x-hidden scrollbar-hide flex relative justify-center items-center py-40 w-full">
         <div className="sign-up-container w-10/12 xl:w-9/12 flex flex-col justify-center items-center">
           <p className="text-zinc-600 text-base font-normal pb-6 font-poppins leading-relaxed text-center">
             Join our exclusive mailing list to stay informed about upcoming
