@@ -11,8 +11,7 @@ const MobileHorizontalScroll = () => {
         target: mobileTargetRef,
     });
 
-    const x = useTransform(scrollYProgress, [0, 1], ["-65%", "1%"]);
-
+    const x = useTransform(scrollYProgress, [0, 1], ["-50%", "1%"]);
 
 
   return (
@@ -23,8 +22,8 @@ const MobileHorizontalScroll = () => {
     <h1 className="flex lg:hidden text-3xl lg:text-5xl text-slate-800 font-bold lg:leading-[56px]">
       A Lifestyle Beyond Imagination
     </h1>
-    <div className='relative ml-[50vw] h-[200vh]' style={{ marginLeft: 70 + "vw" }}>
-        <motion.div style={{ x }} className="images-section flex w-full lg:w-[42.917vw] gap-4 sticky top-0 h-screen overflow-hidden items-center">
+    <div className='relative ml-[50vw] h-[200vh]' style={{ marginLeft: 70 + "vw"}}>
+        <motion.div style={{ x, position: "sticky", top: 0, height: "200px"}} className="images-section flex w-full lg:w-[42.917vw] gap-4 sticky top-0 h-screen overflow-hidden items-center">
         {/* <HorizontalScroll targetRef={luxuryBannerContainer}> */}
         <div className="image-1 relative w-[313px] md:w-[60vw] lg:w-[300px] h-[230px] lg:h-[450px] rounded-[10px]">
             <Image

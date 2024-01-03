@@ -176,9 +176,9 @@ export default function Home() {
       </section>
       <section
         ref={targetRef1}
-        className="w-full overflow-x-hidden relative flex flex-col items-center justify-center py-20"
+        className="w-full overflow-x-hidden relative flex flex-col items-center justify-center py-[5%] 2xl:py-[15%]"
       >
-        <div className="banners w-[100vw]">
+        <div className="banners py-[35%] lg:py-0 w-[100vw] flex flex-col justify-center items-center">
           <div className="banner-header w-full flex flex-col items-center justify-center gap-10">
             <h1 className="text-center text-slate-800 text-3xl lg:text-5xl font-bold lg:leading-[56px] lg:w-[60.139vw]">
               The Pièce de Résistance: Ultra Luxury Mansion
@@ -194,7 +194,7 @@ export default function Home() {
           </div>
           <div className="banner-contents w-full flex flex-col items-center justify-center gap-10">
             <div
-              className="banner-contents-1 w-full pl-3 flex items-center justify-center gap-7 overflow-x-hidden"
+              className="banner-contents-1 w-full pl-3 pb-14 flex items-center justify-center gap-7 overflow-x-hidden"
               ref={bannerContainer}
             >
               <HorizontalScroll targetRef={targetRef1}>
@@ -236,7 +236,7 @@ export default function Home() {
         </div>
       </section>
       <section className="stats bg-sky-100 py-16 w-full flex justify-center items-center">
-        <div className="stats-container w-10/12 xl:w-9/12 grid grid-cols-2 gap-7 lg:flex justify-evenly items-center">
+        <div className="stats-container w-10/12 xl:w-9/12 grid grid-cols-2 font-roboto gap-7 lg:flex justify-evenly items-center">
           <div className="sq-ft flex flex-col items-center justify-center">
             <h1 className="text-sky-400 text-[64px] leading-[72px]">30K</h1>
             <p className="text-zinc-600 text-base font-normal leading-relaxed font-poppins">
@@ -301,7 +301,10 @@ export default function Home() {
         </div>
       </section>
       <section className="w-full overflow-x-hidden overflow-y-hidden relative flex flex-col items-center justify-center py-20 pb-48 bg-sky-100">
-        <div className="opulence w-10/12 xl:w-9/12 pt-20" ref={targetRef2}>
+        <div
+          className="opulence w-10/12 xl:w-9/12 py-[15%] lg:py-[5%] 2xl:py-[15%]"
+          ref={targetRef2}
+        >
           <div className="opulence-header flex flex-col items-center justify-center gap-16">
             <h1 className=" text-center text-slate-800 text-3xl lg:text-5xl font-bold lg:leading-[56px]">
               Your Passport to Opulence:
@@ -460,8 +463,8 @@ export default function Home() {
         </div>
       </section>
       <section className="contact flex justify-center items-center">
-        <div className="contact-container w-10/12 xl:w-9/12 flex flex-col-reverse lg:flex-row items-center justify-center gap-6 bg-sky-400 rounded-[15px] lg:h-[49.085vh]">
-          <div className="contact-content w-full flex flex-col items-center px-8 lg:px-0 pb-6 lg:pb-0 lg:items-start justify-center gap-10 lg:pl-16">
+        <div className="contact-container w-10/12 xl:w-9/12 flex flex-col-reverse lg:flex-row items-center justify-center gap-6 bg-sky-400 rounded-[15px] lg:h-[51.085vh] xl:h-[52.085vh] 2xl:h-[49.085vh]">
+          <div className="contact-content w-full flex flex-col items-center px-8 lg:px-0 pb-6 lg:pb-0 lg:items-start justify-center gap-6 lg:pl-16">
             <h1 className="text-white text-3xl lg:text-5xl font-bold lg:leading-[56px]">
               Explore Your Future Home
             </h1>
