@@ -20,16 +20,16 @@ const Navbar = ({ communitySection, exteriorSection, interiorSection, contactSec
             </div>
             <div className="nav-links w-[50vw] flex justify-center items-center" style={{width: 50 + 'vw'}}>
               <ul className="flex w-full justify-evenly items-center space-x-4 text-slate-800 text-lg font-normal font-poppins">
-                <li className="text-white text-lg font-normal leading-relaxed font-poppins">
+                <li className="text-white text-lg font-normal leading-relaxed font-poppins cursor-pointer">
                   <p onClick={() => handleScrollToSection(communitySection.current)}>Community</p>
                 </li>
-                <li className="text-white text-lg font-normal leading-relaxed font-poppins">
+                <li className="text-white text-lg font-normal leading-relaxed font-poppins cursor-pointer">
                   <p onClick={() => handleScrollToSection(exteriorSection.current)}>Exterior</p>
                 </li>
-                <li className="text-white text-lg font-normal leading-relaxed font-poppins">
+                <li className="text-white text-lg font-normal leading-relaxed font-poppins cursor-pointer">
                   <p onClick={() => handleScrollToSection(interiorSection.current)}>Interior</p>
                 </li>
-                <li className="text-white text-lg font-normal leading-relaxed font-poppins">
+                <li className="text-white text-lg font-normal leading-relaxed font-poppins cursor-pointer">
                   <p onClick={() => handleScrollToSection(contactSection.current)}>Contact</p>
                 </li>
               </ul>
@@ -54,16 +54,16 @@ const Navbar = ({ communitySection, exteriorSection, interiorSection, contactSec
                 </div>
                 <div className={`${ showMobileNav ? 'reveal' : 'hide'} nav-links w-full flex flex-col justify-center items-center`}>
                     <ul className='mobile-nav-dropdown flex flex-col w-full justify-center items-center text-slate-800 text-lg font-normal font-poppins'>
-                        <li className='text-white text-lg font-normal font-poppins'>
+                        <li className='text-white text-lg font-normal font-poppins cursor-pointer'>
                             <p onClick={() => handleScrollToSection(communitySection.current)}>Community</p>
                         </li>
-                        <li className='text-white text-lg font-normal font-poppins'>
+                        <li className='text-white text-lg font-normal font-poppins cursor-pointer'>
                             <p onClick={() => handleScrollToSection(exteriorSection.current)}>Exterior</p>
                         </li>
-                        <li className='text-white text-lg font-normal font-poppins'>
+                        <li className='text-white text-lg font-normal font-poppins cursor-pointer'>
                             <p onClick={() => handleScrollToSection(interiorSection.current)}>Interior</p>
                         </li>
-                        <li className='text-white text-lg font-normal font-poppins'>
+                        <li className='text-white text-lg font-normal font-poppins cursor-pointer'>
                             <p onClick={() => handleScrollToSection(contactSection.current)}>Contact</p>
                         </li>
                     </ul>

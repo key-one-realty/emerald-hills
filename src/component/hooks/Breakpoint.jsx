@@ -18,7 +18,7 @@ const useBreakpoint = () => {
     }, [])
 
     const changeBreakpoint = () => {
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
         if (window.innerWidth <= 640) {
             setIsMobile(true);
         } else {
